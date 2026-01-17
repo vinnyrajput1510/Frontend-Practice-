@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        } 
+        html{
+            font-size: 12px;
+            /* this is for rem */
+        }
+        .box{
+            border: 2px solid black;
+           /*  width: 2048px;*/
+            box-sizing: border-box;
+            width: 80vw;
+            margin: auto;
+            height: 10vh;
+           /* text-align: center;*/
+
+            background-color: aquamarine;
+        }
+        .container{
+            box-sizing: border-box;
+            width: 80vw;
+            margin: 23px auto;
+            min-height: 80vh;
+            font-size: 18px;
+            background-color: lightblue;
+        }
+        .container > div{
+            font-size: 2em;
+            /* em-this is 2 mean 2 time of 18 of previous=36
+            rem is for root same as 2 time of root */
+            font-size: 2rem;
+            border: 2px solid red ;
+            width: 100%;
+            /*50 % mean  upper wale container ka 50% */
+
+        }
+        .container > div >div {
+            border: 2px solid green;
+            width: 50%  ;
+            
+        }
+        .mycont{
+            width: 80vw;
+            margin: 23px auto; 
+            height: 80vh;
+            font-size: 2rem;
+            background-color: lightgreen;
+           box-sizing: border-box;
+            /* vmin is for phone width
+            for computer  vmin height */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        there is the box 
+    </div>
+    <div class="container">
+        <div>
+        L ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quidem vero! Quasi quam est praesentium repellendus quod minus maxime ullam perspiciatis omnis sunt fuga modi dolorum, deleniti, amet reiciendis et.
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quasi temporibus, animi sint facere necessitatibus delectus voluptatibus. Voluptatum ratione sint qui quo quos.
+        </div>
+        </div>
+        
+    </div>
+    <div class="mycont">
+        this is another container
+    </div>
+</body>
+</html>
+<!-- /*  if if we use inline element like they not support */ -->

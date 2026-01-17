@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        /*element selector*/
+        div{
+            background-color: red;
+        }
+        /*class selector*/ 
+        .red{
+            background-color: yellow;
+        }
+        .abc{
+            background-color: chartreuse;
+        }
+        /*id selector*/
+        #green{
+            background-color: green;
+        }
+        /* child selector-->this is for p is direct child of div  */
+        div >p{
+            color: orangered   ;
+            background-color: bisque;
+        }
+       /* descendant selector  --> this is for p is present in any element */
+      /* p is present in the div in any form*/
+       div p{
+            color: blue;
+            background-color: rgb(196, 231, 255);
+       }
+    /* universal selector */
+       *{
+        margin: 0;
+        padding:0 ;
+       }
+     /* pseudo selector */
+       a:visited{
+        color: brown ;
+       }
+       a:link{
+        color: fuchsia;
+       }
+       a:active{
+        background-color: red;
+       }
+       a:hover{
+        background-color: black;
+       }
+       p:first-child{
+        background-color: brown;
+       }
+    </style>
+</head>
+<body>
+    <div class="red">
+        i am div
+        <div>
+            <p>hellow </p>
+        </div>
+        <article>
+            i am good
+        </article>
+    </div>
+    <div>
+        i am another div
+    </div>
+    <div id="green">
+        i am the third one
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, cupiditate!</p>
+      
+    </div>
+    <div class="abc">
+        <a href="https://www.google .com"> go to google</a>
+     <a href="https://www.youtube.com">  go youtube</a>
+
+    </div>
+    <div class="one">
+    <p>i am first</p>
+    <p>i am the second</p> 
+   </div>
+</body>
+</html>

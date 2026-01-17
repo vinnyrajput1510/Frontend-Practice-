@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+             /*this is the container property only*/  
+            border: 2px solid red;
+            display: flex;
+            /*flex box are used to left to right or vartical to
+             horizontal*/
+
+            height: 80vh;
+
+            /* justify-content: center; */
+
+            /*justify-content: center; ek CSS Flexbox property hai jo kisi container ke andar elements 
+            ko horizontal direction me center karta hai.
+                     ITS PROPERTIES ARE:
+            flex-start-	Items left me aayenge (default)
+            flex-end-	Items right me aayenge
+            center-	Items center me aayenge
+            space-between-	First item left me, last item right me, beech ka space equally
+            space-around-	Sab items ke aage/peeche equal space
+            space-evenly-	Sab items ke beech equal space, including ends*/
+
+            align-items: center;
+
+          /* THIS IS USED FOR ONLY ONE LINE  (align-items ek CSS Flexbox property hai jo container ke andar ke elements ko cross axis (yani vertical direction) me align karta hai.)
+
+            📌 Main axis = Horizontal (default)
+            📌 Cross axis = Vertical (default)*/
+
+
+            /* flex-direction: column; */ 
+
+            /* flex-direction ek CSS Flexbox property hai jo ye decide karti hai ki flex container ke andar wale items ka layout kis direction me hoga — horizontal ya vertical. */
+
+            
+            /*  justify-content: center	Main Axis (horizontal by default)	Elements ko left to right center karta hai
+            align-items: center	Cross Axis (vertical by default)	Elements ko top to bottom center karta hai*/
+
+            flex-wrap: wrap;
+
+             /* flex-wrap ek CSS Flexbox property hai jo decide karti hai ki jab container ke andar
+              space kam ho jaaye, to items ek line me chipke rahenge ya next line me wrap ho jaayenge.  */
+
+
+            /* align-content: flex-start; */
+            /*THERE IS MORE THAN ONE LINE IN CONTENT FOR EDIT */
+
+            /* there is no justify-items  in flexbox; */
+            flex-flow: row wrap;
+            /* gap: 30px; 
+            row-gap: 40px;
+            column-gap: 10px; */
+            gap: 40px 10px;
+
+        }
+
+        .item {  
+            /* flex-grow: 1; */
+            height: 92px;
+            width: 92px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: blueviolet;
+        }
+
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+
+        .item1{  
+            /* flex-grow: 2; */
+             /* TAKE SPACE OF TWO INSTEAD OF ONE */
+
+            /* flex-shrink: 2; */
+            /* flex-shrink ek CSS Flexbox property hai jo decide karti hai ki agar container me space kam ho jaaye, to items kitna shrink (chhote) honge. */
+
+            align-self: flex-end;
+             /*  KOI INDIVISUL KO KESE OR KHA ALIGN KRNA HAI OR CAHNGE THE POSITION OF PARTICULAR ITEM */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            
+         
+        </div>
+    </main>
+
+</body>
+
+</html>
